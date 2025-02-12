@@ -10,7 +10,7 @@ const LoginSignup = () => {
 
   const login = async () => {
     let dataObj;
-    await fetch("http://localhost:5000/login", {
+    await fetch("https://ener-backend-1.onrender.com/login", {
       method: "POST",
       headers: {
         Accept: "application/json",

@@ -7,7 +7,7 @@ const LatestPreprints = () => {
   const [preprints, setPreprints] = useState([]); 
  
   useEffect(() => { 
-    fetch("http://localhost:5000/latestpreprints") 
+    fetch("https://ener-backend-1.onrender.com/latestpreprints") 
       .then((res) => res.json()) 
       .then((data) => setPreprints(data)) 
       .catch((err) => console.error(err)); 
@@ -15,7 +15,7 @@ const LatestPreprints = () => {
  
   const handleSearch = (e) => { 
     e.preventDefault(); 
-    fetch(`http://localhost:5000/search?query=${searchQuery}`) 
+    fetch(`https://ener-backend-1.onrender.com/search?query=${searchQuery}`) 
       .then((res) => res.json()) 
       .then((data) => setResults(data)) 
       .catch((err) => console.error(err)); 

@@ -8,7 +8,7 @@ const PreprintDetails = () => {
   const [error, setError] = useState(""); 
  
   useEffect(() => { 
-    fetch(`http://localhost:5000/preprint/${id}`) 
+    fetch(`https://ener-backend-1.onrender.com/preprint/${id}`) 
       .then((res) => res.json()) 
       .then((data) => { 
         if (data.success) { 
@@ -38,7 +38,7 @@ const PreprintDetails = () => {
   <p>  
     <strong>DOI:</strong>{" "}  
     <a   
-      href={`http://localhost:5000/uploads/${preprint.pdf}`}   
+      href={`https://ener-backend-1.onrender.com/uploads/${preprint.pdf}`}   
       target="_blank"   
       rel="noopener noreferrer"  
       style={{ color: "blue", textDecoration: "underline" }}  
@@ -76,7 +76,7 @@ const PreprintDetails = () => {
       {preprint.pdf && ( 
         <div> 
           
-          <a href={`http://localhost:5000/uploads/${preprint.pdf}`} download target="_blank" rel="noopener noreferrer"> 
+          <a href={`https://ener-backend-1.onrender.com/uploads/${preprint.pdf}`} download target="_blank" rel="noopener noreferrer"> 
       <button style={{ padding: "10px", background: "#007bff", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}> 
         Download PDF 
       </button> 

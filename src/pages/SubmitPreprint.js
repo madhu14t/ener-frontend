@@ -47,7 +47,7 @@ export default function SubmitPreprint() {
 
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/submit", {
+      const response = await fetch("https://ener-backend-1.onrender.com/submit", {
         method: "POST",
         body: formDataToSend,
         headers: {
